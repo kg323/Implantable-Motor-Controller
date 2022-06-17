@@ -101,7 +101,9 @@ Specifications to each bit set and its function will be explained with the follo
 
 
 OCR0A = 128; // OCR0A – Output Compare Register A 
+
 // This uses 8 bits which we in turn will use to create the Duty Cycle
+
 // Currently there is a 50% duty cycle (128/256) at 8 bit
 
 
@@ -113,7 +115,9 @@ This image can also be found on the ATTINY24A spec sheet, page 89
 
 
 CLKPR = (1 << CLKPCE); // Bit 7 – CLKPCE: Clock Prescaler Change Enable
+
 //CLKPR – Clock Prescale Register
+
 //This is used to scale the clock which is set at 1MHz by default
 
 
@@ -125,7 +129,9 @@ This image can also be found on the ATTINY24A spec sheet, page 37
 
 
 CLKPR = (1 << CLKPS0); //clock divide by 2
+
 //CLKPR – Clock Prescale Register
+
 //Enabeling these bits determines the clock division factor
 
 
@@ -138,8 +144,11 @@ This image can also be found on the ATTINY24A spec sheet, page 38
 
 
 TCCR0A |= (1 << COM0A1); //set Phase correct PWM 
+
 //TCCR0A – Timer/Counter Control Register A
+
 //Setting COM0A1 to 1, in Phase Correct Mode, has up-counting
+
 //This means that going from 0-255 for OC0A will be 0 to 100% Duty Cycle respectively
 
 
@@ -151,8 +160,11 @@ This image can also be found on the ATTINY24A spec sheet, page 86
 
 
 TCCR0A |= (1 << WGM00) ; //set Phase correct PWM mode
+
 //TCCR0A – Timer/Counter Control Register A
+
 //Setting WGM00 to 1 guves us the Mode of Operation to PWM, Phase Correct
+
 //With the Top being 0xFf (255), and OCRA is uodated at the TOP (resets)
 
 
@@ -163,7 +175,9 @@ This image can also be found on the ATTINY24A spec sheet, page 87
 
 
 TCCR0B |= (1 << CS01); //Pre-scaler set to 1
+
 //TCCR0B – Timer/Counter Control Register B
+
 //Setting CS00 to 1 enables a clock prescaling of 1 (called no prescaling)
 
 
