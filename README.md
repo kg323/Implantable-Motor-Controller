@@ -4,14 +4,21 @@ COLLEGE OF ENGINEERING AND COMPUTER SCIENCE
 
 # Implantable-Motor-Controller with Wireless CommunicationImplantable
 
+![image](https://user-images.githubusercontent.com/98668234/174352608-28c0adcf-a6dc-42e8-b1ac-e4b4233af9ce.png)
+
 
 # ATTINY24A Pinout:
 
 5V (Power Supply) VTG = Pin 1
+
 GND (Power Supply) GND - Pin 14
+
 MISO - Pin 8
+
 MOSI - Pin 7
+
 SCK (Clock used from program: default is 1 MHz) - Pin 9
+
 RESET BAR - Pin 4
 
 
@@ -23,10 +30,15 @@ IMPORTANT: A Picture will be attached showing connections of ATTINY24A labeled P
 # PICKit 4 Pinout:
 
 V (Power Supply) VTG = Pin 2
+
 GND (Power Supply) GND - Pin 3
+
 MISO - Pin 4
+
 MOSI - Pin 5
+
 SCK (Clock used from program: default is 1 MHz) - Pin 6
+
 RESET BAR - Pin 7
 
 
@@ -75,18 +87,16 @@ We used the PICKit in UART Module, and were able to program everything with the 
 
 
 
-HOW TO CHANGE OUTPUT USING BITS:
+# How To Change PWM Output Using Specified Bits and Registers:
 
 Datasheet for ATTINY24A can be found here: https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny24A-44A-84A-DataSheet-DS40002269A.pdf
 
 
 Specifications to each bit set and its function will be explained with the following:
 
-BEFORE STARTING, IT IS IMPORTANT TO NOTE THAT (1 << "") SETS THE BIT TO 1 IN C CODE
+<ins>BEFORE STARTING, IT IS IMPORTANT TO NOTE THAT (1 << "") SETS THE BIT TO 1 IN C CODE</ins>
 
-
-
-DDRB |= (1 << DDB2); //PB2 is set as the output 
+<ins>DDRB |= (1 << DDB2); //PB2 is set as the output</ins>
 
 
 
@@ -97,6 +107,7 @@ OCR0A = 128; // OCR0A – Output Compare Register A
 
 
 ![image](https://user-images.githubusercontent.com/98668234/174401785-219d8282-be8c-4bcf-b279-5609deb32a45.png)
+
 This image can also be found on the ATTINY24A spec sheet, page 89
 
 
@@ -120,6 +131,7 @@ CLKPR = (1 << CLKPS0); //clock divide by 2
 
 
 ![image](https://user-images.githubusercontent.com/98668234/174401874-6f5e2cb9-6e60-4703-b03d-7575fb18883d.png)
+
 This image can also be found on the ATTINY24A spec sheet, page 38
 
 
@@ -133,6 +145,7 @@ TCCR0A |= (1 << COM0A1); //set Phase correct PWM
 
 
 ![image](https://user-images.githubusercontent.com/98668234/174401920-4ecce6ac-006e-44bb-821f-c921d7057c67.png)
+
 This image can also be found on the ATTINY24A spec sheet, page 86
 
 
@@ -144,6 +157,7 @@ TCCR0A |= (1 << WGM00) ; //set Phase correct PWM mode
 
 
 ![image](https://user-images.githubusercontent.com/98668234/174401953-3edb5592-a60b-4bec-acad-8d58edf56d0a.png)
+
 This image can also be found on the ATTINY24A spec sheet, page 87
 
 
@@ -154,6 +168,7 @@ TCCR0B |= (1 << CS01); //Pre-scaler set to 1
 
 
 ![image](https://user-images.githubusercontent.com/98668234/174401991-fa0819c8-b518-455e-bb23-3d9697a1811e.png)
+
 This can also be found on the ATTINY24A spec sheet, page 88
 
 
