@@ -7,6 +7,8 @@ COLLEGE OF ENGINEERING AND COMPUTER SCIENCE
 ![image](https://user-images.githubusercontent.com/98668234/174352608-28c0adcf-a6dc-42e8-b1ac-e4b4233af9ce.png)
 
 
+<br>
+
 # ATTINY24A Pinout:
 
 5V (Power Supply) VTG = Pin 1
@@ -26,6 +28,7 @@ RESET BAR - Pin 4
 IMPORTANT: A Picture will be attached showing connections of ATTINY24A labeled PIC1
 
 
+<br>
 
 # PICKit 4 Pinout:
 
@@ -47,7 +50,7 @@ IMPORTANT: PICKit has an arrow indicating which is the first pin.
 A picture will be supplied. It will be labeled PIC2. Just to ensure that connections
 are made properly
 
-
+<br>
 
 
 After we set up these connections, we ensured that the program used was in MPLAB x IDE
@@ -189,8 +192,45 @@ This image can also be found on the ATTINY24A spec sheet, page 87
 
 
 <br>
+
 ![image](https://user-images.githubusercontent.com/98668234/174401991-fa0819c8-b518-455e-bb23-3d9697a1811e.png)
 
 This can also be found on the ATTINY24A spec sheet, page 88
+
+
+# ATTINY20-MMHR Pinout:
+
+5V (Power Supply) VTG = Pin 1
+
+GND (Power Supply) GND - Pin 14
+
+TPI CLK - Pin 11
+
+TPI DATA - Pin 12
+
+RESET BAR - Pin 13
+
+
+<br>
+
+
+# PICKit 4 Pinout:
+
+V (Power Supply) VTG = Pin 2
+
+GND (Power Supply) GND - Pin 3
+
+TPI DATA - Pin 4
+
+TPI CLK - Pin 5
+
+RESET BAR - Pin 6
+
+
+**Datasheet and documention for TPI Protocol can be found in following links provided:**
+
+**Datasheet: https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8235-8-bit-AVR-Microcontroller-ATtiny20_Datasheet_Summary.pdf**
+
+**TPI Protocol Information: https://ww1.microchip.com/downloads/en/Appnotes/doc8373.pdf**
 
 
