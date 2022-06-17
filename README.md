@@ -53,17 +53,11 @@ are made properly
 After we set up these connections, we ensured that the program used was in MPLAB x IDE
 with the latest compiler xc8 (v2.32)
 
-To Begin Programming/Debugging:
+
+# **To Begin Programming/Debugging:**
 
 We used the PICKit in UART Module, and were able to program everything with the following Code:
 
-
-/* 
- * File:   attest.c
- * Author: User PC
- *
- * Created on December 2, 2021, 2:32 PM
- */
 
 #include <avr/io.h>
 
@@ -123,6 +117,7 @@ CLKPR = (1 << CLKPCE); // Bit 7 – CLKPCE: Clock Prescaler Change Enable
 
 
 ![image](https://user-images.githubusercontent.com/98668234/174401847-a5787833-fca7-43cb-95bb-5e88a8e79058.png)
+
 This image can also be found on the ATTINY24A spec sheet, page 37
 
 
