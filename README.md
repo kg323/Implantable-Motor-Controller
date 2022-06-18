@@ -2,14 +2,28 @@
 
 COLLEGE OF ENGINEERING AND COMPUTER SCIENCE
 
-# Implantable-Motor-Controller with Wireless CommunicationImplantable
+# Implantable-Motor-Controller with Wireless Communication
 
 ![image](https://user-images.githubusercontent.com/98668234/174352608-28c0adcf-a6dc-42e8-b1ac-e4b4233af9ce.png)
 
 
+
+# Purpose: 
+
+The general purpose within this project was to establish a wireless design designated to receive transmitted power which in turn would control a motor. This motor is intended to go within the heart in order to simulate a heartbeat, which is done by having the motor controller cause the motor to pump blood at a designated rate. In order to successfully implement said idea, we needed to use wireless power transmitter and receiver. The receiving system that was created consisted of an internal resonator that was tuned for 6.78 MHz, the lowest frequency allowed without interference from other medical devices. The receiver was coupled to the internal resonator, which produces an AC voltage. The AC voltage is then fed to a rectifier, the CBRDFSH2-100 bridge rectifier, which was meant to change the AC input into a DC output that would be then sent a voltage regulator that would prevent the overload. The voltage regulator we chose was the TLV76760QWDRBRQ1 voltage
+regulator, which we chose for its size, which would fit into our PCB’s design parameters. The output of the voltage regulator was then fed into the motor controller, micro-controller, and to the voltagecontrolled switch. These components were chosen were the DRV8837, the ATTINY20-MMHR, and the TS5A4596 voltage switch. These
+components were all chosen for their dimensions primarily, which had at least one side that was within the 5 mm margin, which was our designated PCB width and because they could be used for our purposes. 
+
 <br>
 
-# ATTINY24A Pinout:
+
+# **Procedures/Imlementations:**
+
+<br>
+
+## Initial Testing Using ATTINY24A
+
+### ATTINY24A Pinout:
 
 5V (Power Supply) VTG = Pin 1
 
@@ -30,7 +44,7 @@ IMPORTANT: A Picture will be attached showing connections of ATTINY24A labeled P
 
 <br>
 
-# PICKit 4 Pinout:
+### PICKit 4 Pinout:
 
 V (Power Supply) VTG = Pin 2
 
@@ -57,7 +71,7 @@ After we set up these connections, we ensured that the program used was in MPLAB
 with the latest compiler xc8 (v2.32)
 
 
-# **To Begin Programming/Debugging:**
+## **To Begin Programming/Debugging:**
 
 We used the PICKit in UART Module, and were able to program everything with the following Code:
 
@@ -84,7 +98,7 @@ We used the PICKit in UART Module, and were able to program everything with the 
 
 
 
-# How To Change PWM Output Using Specified Bits and Registers:
+## How To Change PWM Output Using Specified Bits and Registers:
 
 **Datasheet for ATTINY24A can be found here: https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny24A-44A-84A-DataSheet-DS40002269A.pdf**
 
@@ -198,6 +212,20 @@ This image can also be found on the ATTINY24A spec sheet, page 87
 This can also be found on the ATTINY24A spec sheet, page 88
 
 
+## Second Testing Using ATTINY20-MMHR
+
+Upon Successful implementation using the ATTINY24A micro controller, we determined that the same C language code may be utilized in order to successfully create the desired PWM. Once the code was set in stone, the only difference would be utilizing the ATTINY20-MMHR which consisted of a TPI protocol (different connections), so the following will address the connections and how proper programming was conducted.
+
+<br>
+
+**Datasheet and documention for TPI Protocol can be found in following links provided:**
+
+**Datasheet: https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8235-8-bit-AVR-Microcontroller-ATtiny20_Datasheet_Summary.pdf**
+
+**TPI Protocol Information: https://ww1.microchip.com/downloads/en/Appnotes/doc8373.pdf**
+
+<br>
+
 # ATTINY20-MMHR Pinout:
 
 5V (Power Supply) VTG = Pin 1
@@ -227,10 +255,6 @@ TPI CLK - Pin 5
 RESET BAR - Pin 6
 
 
-**Datasheet and documention for TPI Protocol can be found in following links provided:**
 
-**Datasheet: https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8235-8-bit-AVR-Microcontroller-ATtiny20_Datasheet_Summary.pdf**
-
-**TPI Protocol Information: https://ww1.microchip.com/downloads/en/Appnotes/doc8373.pdf**
 
 
