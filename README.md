@@ -226,7 +226,7 @@ Upon Successful implementation using the ATTINY24A micro controller, we determin
 
 <br>
 
-# ATTINY20-MMHR Pinout:
+### ATTINY20-MMHR Pinout:
 
 5V (Power Supply) VTG = Pin 1
 
@@ -242,7 +242,7 @@ RESET BAR - Pin 13
 <br>
 
 
-# PICKit 4 Pinout:
+### PICKit 4 Pinout:
 
 V (Power Supply) VTG = Pin 2
 
