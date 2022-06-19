@@ -2,7 +2,7 @@
 
 COLLEGE OF ENGINEERING AND COMPUTER SCIENCE
 
-# Implantable-Motor-Controller with Wireless Communication
+# Implantable Motor Controller with Wireless Communication
 
 ![image](https://user-images.githubusercontent.com/98668234/174352608-28c0adcf-a6dc-42e8-b1ac-e4b4233af9ce.png)
 
@@ -252,6 +252,23 @@ TPI DATA - Pin 4
 TPI CLK - Pin 5
 
 RESET BAR - Pin 6
+
+<br>
+### Implementation:
+
+Since the **ATTINY20-MMHR is a micro controller with a VQFN package**, it required it's own PCB (which was designed and produced for our use) which was then soldered using a **hot plate and solder paste.**
+
+Implementation of the functional connections between the ATTINY20-MMHR micro controller and the DRV8837 motor controller can be viewed in the presentation or from the link below:
+
+https://drive.google.com/file/d/1y8OUHFcmrJXs1CcQBEaeqDlyr4NGHoDP/view?usp=sharing
+
+
+# Final Product
+
+Since our main objective was to have everything fully functinoal and produced within our specified dimensions, we needed to produce a PCB which would account for all components and dimensions necessary for final product. THe PCB found below was created but later had slight modifications for final production. This was created in order to serve our intention of placing within a simulated ventricle in order to test with the wireless power team's transmitter.
+
+![image](https://user-images.githubusercontent.com/98668234/174463300-f3a84685-e3bb-4b52-99e0-49366c75c52d.png)
+
 
 
 
