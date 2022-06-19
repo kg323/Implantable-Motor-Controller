@@ -254,6 +254,7 @@ TPI CLK - Pin 5
 RESET BAR - Pin 6
 
 <br>
+
 ### Implementation:
 
 Since the **ATTINY20-MMHR is a micro controller with a VQFN package**, it required it's own PCB (which was designed and produced for our use) which was then soldered using a **hot plate and solder paste.**
@@ -262,6 +263,7 @@ Implementation of the functional connections between the ATTINY20-MMHR micro con
 
 https://drive.google.com/file/d/1y8OUHFcmrJXs1CcQBEaeqDlyr4NGHoDP/view?usp=sharing
 
+<br>
 
 # Final Product
 
